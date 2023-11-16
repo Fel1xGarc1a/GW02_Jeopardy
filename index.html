@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jeopardy Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function selectCategory(category, value) {
+            // Send selected category and value to PHP script
+            window.location = 'game.php?category=' + category + '&value=' + value;
+        }
+    </script>
+</head>
+<body>
+    <h1>Jeopardy Game</h1>
+
+    <table border="1">
+        <tr>
+            <th>Category 1</th>
+            <th>Category 2</th>
+            <th>Category 3</th>
+        </tr>
+        <tr>
+            <td><button onclick="selectCategory(1, 100)">$100</button></td>
+            <td><button onclick="selectCategory(2, 100)">$100</button></td>
+            <td><button onclick="selectCategory(3, 100)">$100</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="selectCategory(1, 200)">$200</button></td>
+            <td><button onclick="selectCategory(2, 200)">$200</button></td>
+            <td><button onclick="selectCategory(3, 200)">$200</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="selectCategory(1, 300)">$300</button></td>
+            <td><button onclick="selectCategory(2, 300)">$300</button></td>
+            <td><button onclick="selectCategory(3, 300)">$300</button></td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-image: url("jeopardy_background.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin: 10;
+    padding: 0;
+	color: white;
+	font-size: 50px;
+    text-shadow: 4px 4px 4px black;
+}
+.header {
+    text-align: center;
+    padding: 10px; /* Add padding for spacing */
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+}
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 12px solid black;
+    padding: 10px;
+    text-align: center;
+    background-color: #060ce9;
+    cursor: pointer;
+}
+select{
+	  font-family: "Lucida Console", "Courier New", monospace;
+     width:80px;
+	 height:80px;
+	font-size:50px;
+	text-align:center;
+}
+th {
+    background-color: #060ce9;
+    color: #fff;
+}
+
+td a {
+    display: block;
+    text-decoration: none;
+    color: #EBBE00;
+}
+
+td a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.question {
+    margin: 20px auto;
+    width: 60%;
+    background-color: #060ce9;
+    border: 4px solid black;
+    border-radius: 1ex;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scoreboard {
+    margin: 20px auto;
+    width: 60%;
+    background-color: #060ce9;
+    border: 4px solid black;
+    border-radius: 1ex;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.PlayerTurn {
+    margin: 20px auto;
+    width: 60%;
+    background-color: #060ce9;
+    border: 4px solid black;
+    border-radius: 1ex;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="submit"] {
+    padding: 10px;
+    margin: 10px;
+    width: 60%;
+	position:relative;
+	left:3px;
+	font-family: "Lucida Console", "Courier New", monospace;
+}
+
+input[type="submit"] {
+    background-color: hotpink;
+    color: white;
+    border: none;
+    cursor: pointer;	
+	width: 200px;
+	font-size:20px;
+}
+
+input[type="submit"]:hover {
+    background-color: green;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+    }
+    .question, .scoreboard {
+        width: 90%;
+    }
+}
