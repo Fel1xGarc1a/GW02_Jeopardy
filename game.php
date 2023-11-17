@@ -1,7 +1,19 @@
 <?php
 session_start();
 
-// Include your questions file
+// Handle the Reset Game request
+if (isset($_POST['reset'])) {
+    // Clear the session data
+    session_unset();
+    session_destroy();
+
+    // Start a new session
+    session_start();
+
+    // Redirect to the starting page of your game
+    header("Location: intro.html"); // Redirect back to the game page
+    exit;
+}
 include 'questions.php';
 
 // Function to display the game board
@@ -137,6 +149,14 @@ for ($i = 1; $i <= $_SESSION['playerCount']; $i++) {
     echo "<p>Player $i Score: $" . $_SESSION['scores'][$i] . '</p>';
 }
 echo '</div>';
+
+// Add the Reset Game button
+echo '<div class="reset-game">';
+echo '<form action="game.php" method="post">';
+echo '<input type="submit" name="reset" value="Reset Game">';
+echo '</form>';
+echo '</div>';
+
 ?>
 </body>
 </html>
