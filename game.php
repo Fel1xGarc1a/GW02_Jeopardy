@@ -88,8 +88,11 @@ if (isset($_GET['category']) && isset($_GET['value'])) {
         }
     }
 } elseif (isset($_POST['category'], $_POST['value'], $_POST['answer'])) {
-    $category = $_POST['category'];
-    $value = $_POST['value'];
+    if (isset($_POST['category'], $_POST['value'])) {
+        $category = $_POST['category'];
+        $value = $_POST['value'];
+    }
+
     $playerAnswer = $_POST['answer'];
 
     $correctAnswerFound = false;
@@ -103,6 +106,10 @@ if (isset($_GET['category']) && isset($_GET['value'])) {
         } elseif ($item['value'] == $value) {
             $correctAnswer = $item['answer'];
         }
+    }
+
+    if (!$correctAnswerFound) {
+        $_SESSION['scores'][$_SESSION['currentPlayer']] -= $value; // Deduct points for an incorrect answer.
     }
 
     $_SESSION['currentPlayer'] = ($_SESSION['currentPlayer'] % $_SESSION['playerCount']) + 1;
@@ -126,10 +133,11 @@ if (isset($_GET['answerMessage'])) {
     $answerMessage = urldecode($_GET['answerMessage']);
     echo '<div class="answer-message">' . $answerMessage . '</div>';
 }
-echo "Player " . $_SESSION['currentPlayer'] . "'s Turn";
 echo '</div>';
 
-
+echo '<div class="PlayerTurn">';
+echo "Player " . $_SESSION['currentPlayer'] . "'s Turn";
+echo '</div>';
 
 echo '<div class="scoreboard">';
 for ($i = 1; $i <= $_SESSION['playerCount']; $i++) {
