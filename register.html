@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel ="stylesheet" href="styles.css">
+<style>
+  body {
+      background-image: url('jeopardy_background.png');
+      background-size: cover; /* Adjust as needed */
+      /* Other background properties like background-repeat, background-position, etc. can be added here */
+      color: yellow;
+  }
+</style>
+</head>
+<body>
+<form action="login.php" method="get" name="Login_Form">
+  <table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="Table">
+    <tr>
+      <td colspan="2" align="center" valign="top"><h3>Register Page</h3></td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">Username</td>
+      <td><input name="id" type="text" class="Input" placeholder="ID" required></td>
+    </tr>
+    <tr>
+      <td align="right">Password</td>
+      <td><input name="pw" type="password" placeholder="password" class="Input" required></td>
+    </tr>
+    <tr>
+      <td align="right"><input name="Submit" type="submit" value="Register" class="Button2"></td>
+	  <td align="center"><a href="login.php"><input name="Submit" type="button" value="Login" class="Button1"></a></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
