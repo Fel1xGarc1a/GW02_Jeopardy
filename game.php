@@ -109,7 +109,7 @@ if (isset($_GET['category']) && isset($_GET['value'])) {
     }
 
     if (!$correctAnswerFound) {
-        $_SESSION['scores'][$_SESSION['currentPlayer']] -= $value; // Deduct points for an incorrect answer.
+        $_SESSION['scores'][$_SESSION['currentPlayer']] -= $value;
     }
 
     $_SESSION['currentPlayer'] = ($_SESSION['currentPlayer'] % $_SESSION['playerCount']) + 1;
