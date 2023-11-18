@@ -122,11 +122,11 @@ if (isset($_GET['category']) && isset($_GET['value'])) {
 }
 
 echo '<div class="PlayerTurn">';
-echo "Player " . $_SESSION['currentPlayer'] . "'s Turn";
 if (isset($_GET['answerMessage'])) {
     $answerMessage = urldecode($_GET['answerMessage']);
     echo '<div class="answer-message">' . $answerMessage . '</div>';
 }
+echo "Player " . $_SESSION['currentPlayer'] . "'s Turn";
 echo '</div>';
 
 
