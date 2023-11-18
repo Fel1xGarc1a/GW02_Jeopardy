@@ -5,9 +5,8 @@
     <title>Jeopardy Game</title>
     <style>
         body {
-            background-image: url('jeop_logo.png');
-            background-size: cover; /* Adjust as needed */
-            /* Other background properties like background-repeat, background-position, etc. can be added here */
+            background-image: url('jeopardy_background.png');
+            background-size: cover;
         }
     </style>
 </head>
@@ -15,14 +14,10 @@
     <div class="header">
         <img src="logo.png" alt="Logo">
     </div>
-    <form action="game.php" method="post"></br>
-        <label for="playerCount">Number of Players:</label></br>
-        <select name="playerCount" id="playerCount">
-            <option value="1">1</option>
-            <option value="2">2</option>
-        </select></br></br>
+    <form action="game.php" method="post">
+        <input type="hidden" name="playerCount" value="2">
+
         <input type="submit" value="Play!">
     </form>
-
 </body>
 </html>
